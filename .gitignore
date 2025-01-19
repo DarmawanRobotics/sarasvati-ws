@@ -1,0 +1,63 @@
+# ROS2 message and service generation files
+msg_gen/
+srv_gen/
+msg/*Action.msg
+msg/*ActionFeedback.msg
+msg/*ActionGoal.msg
+msg/*ActionResult.msg
+msg/*Feedback.msg
+msg/*Goal.msg
+msg/*Result.msg
+msg/_*.py
+srv/_*.py
+
+# Dynamic reconfigure generated files
+*.cfgc
+/cfg/cpp/
+/cfg/*.py
+
+# Generated documentation
+*.dox
+*.wikidoc
+
+# IDE and editor-specific files
+# Eclipse
+.project
+.cproject
+
+# QtCreator
+CMakeLists.txt.user
+qtcreator-*
+*.user
+
+# Visual Studio Code specific files
+.vscode/
+*.code-workspace
+
+# Vim swap files
+*~
+
+# Emacs temporary files
+.#*
+
+# Python-specific files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.DS_Store
+
+# ROS2-specific custom files
+CATKIN_IGNORE
+
+# Package configurations and planning files
+*.pcd
+/planning/cfg
+/planning/docs
+/planning/src
+
+# Temporary and backup files
+*.bak
+*.swp
+*.swo
+*.swn
