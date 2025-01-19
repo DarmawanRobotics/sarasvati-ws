@@ -25,8 +25,8 @@ class PX4IONode(Node):
         self.actuator_pub = self.create_publisher(ActuatorMotors, '/fmu/in/actuator_motors', qos_profile)
 
         # ========== TIMERS ================
-        self.timer_400hz = self.create_timer(0.002, self.publish_actuator)
-        self.timer_2hz = self.create_timer(0.5, self.publish_offboard)
+        self.create_timer(0.002, self.publish_actuator) # 400Hz
+        self.create_timer(0.5, self.publish_offboard)   # 2Hz
 
         self.get_logger().info('PX4 IO node started')
 
