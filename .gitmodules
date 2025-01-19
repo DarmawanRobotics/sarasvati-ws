@@ -1,3 +1,0 @@
-[submodule "utils/lwgps"]
-	path = utils/lwgps
-	url = git@github.com:DarmawanRobotics/lwgps.git
