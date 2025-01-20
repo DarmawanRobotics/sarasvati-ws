@@ -1,5 +1,5 @@
 import numpy as np
-from utility import clamp
+from utility import clamp, print_parameters
 from rclpy.node import Node
 
 class HelperPID
@@ -70,14 +70,4 @@ class HelperPID
         
         self.set_pid(max_kP, max_kI, max_kD)
         self.reset()
-
-        param_info = (
-            f"PID Parameters ({self._name}):\n"
-            f"  - Membership Amount: {self.membership_amount}\n"
-            f"  - Output Bound: {self.output_bound}\n"
-            f"  - Accumulation Bound: {self.accumulation_bound}\n"
-            f"  - Max kP: {self._kP}\n"
-            f"  - Max kI: {self._kI}\n"
-            f"  - Max kD: {self._kD}"
-        )
-        self.node.get_logger().info(param_info)
+        print_parameters(self.node, self.name)
