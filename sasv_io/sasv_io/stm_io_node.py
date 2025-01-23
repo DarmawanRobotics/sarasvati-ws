@@ -4,6 +4,8 @@ import serial
 from rclpy.node import Node
 from std_msgs.msg import Bool
 
+from helper.utility import clamp
+
 class STMCommunicationNode(Node):
     def __init__(self):
         super().__init__('stm_io_node')
@@ -20,6 +22,7 @@ class STMCommunicationNode(Node):
 
         # ========== TIMERS ================
         self.create_timer(0.02, self.send_serial_data)  # 50Hz
+        clamp(0.5, 0.5)
 
     def init_parameters(self):
         """Initialize node parameters."""

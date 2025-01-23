@@ -20,6 +20,9 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'dynamixel_io_node = sasv_io.dynamixel_io_node:main',
+            'px4_io_node = sasv_io.px4_io_node:main',
+            'stm_io_node = sasv_io.stm_io_node:main',
         ],
     },
 )

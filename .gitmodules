@@ -1,3 +1,6 @@
 [submodule "utils/dlio"]
 	path = utils/dlio
 	url = git@github.com:DarmawanRobotics/dlio.git
+[submodule "utils/px4_msgs"]
+	path = utils/px4_msgs
+	url = git@github.com:PX4/px4_msgs.git

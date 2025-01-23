@@ -2,6 +2,7 @@ from rclpy.node import Node
 
 def clamp(value: float, bound: float) -> float:
     """Clamp the value within the specified bound."""
+    print("Clamping value")
     return max(min(value, bound), -bound)
 
 def print_parameters(node: Node, namespace: str):
